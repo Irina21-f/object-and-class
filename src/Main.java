@@ -1,23 +1,24 @@
 public class Main {
     public static void main(String[] args) {
-        //первая книга с измененным годом
+        //первая книга
         Author pushkin = new Author("Александр", "Пушкин");
-        System.out.println("Имя автора - " + pushkin.getNameAuthor());
-        System.out.println("Фамилия автора - " + pushkin.getSurnameAuthor());
-
         Book onegin = new Book("Евгений Онегин", pushkin, 1950);
-        System.out.println("Название книги " + onegin.getNameOfBook());
-        System.out.println("Писатель " + onegin.getAuthor());
-        System.out.println("Год выпуска " + onegin.getPublishingYear());
-        onegin.setPublishingYear(2000);
-        System.out.println("Год выпуска " + onegin.getPublishingYear());
         //вторая книга
         Author lermontov = new Author("Михаил", "Лермонтов");
-        System.out.println("Имя автора - " + lermontov.getNameAuthor());
-        System.out.println("Фамилия автора - " + lermontov.getSurnameAuthor());
         Book parus = new Book("Парус", lermontov, 2001);
-        System.out.println("Название книги " + parus.getNameOfBook());
-        System.out.println("Писатель " + parus.getAuthor());
-        System.out.println("Год выпуска " + parus.getPublishingYear());
+        System.out.println();
+        //выводим авторов и книги
+        System.out.println("pushkin.toString() = " + pushkin.toString());
+        System.out.println("lermontov.toString() = " + lermontov.toString());
+        System.out.println("onegin.toString() = " + onegin.toString());
+        System.out.println("parus.toString() = " + parus.toString());
+        System.out.println();
+        //сравниваем авторов и книги
+        System.out.println("pushkin.equals(lermontov) = " + pushkin.equals(lermontov));
+        System.out.println("parus.equals(parus) = " + parus.equals(parus));
+        System.out.println();
+        //hashCods
+        System.out.println("lermontov.hashCode() = " + lermontov.hashCode());
+        System.out.println("parus.hashCode() = " + parus.hashCode());
     }
 }
